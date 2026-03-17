@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css'; // Adjust the path as necessary
 
 
@@ -17,8 +17,8 @@ const MedicalReportAnalyzer = () => {
 
 
   // Updated API configuration with new model
-  const API_KEY = 'AIzaSyCYSHEQEe5GtQUZeIkGDIl0ne_hgHKQap8';
-  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent`;
+  const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent`;
 
 
   const languages = [
